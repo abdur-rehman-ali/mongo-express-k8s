@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world
+  annotations:
+    description: "This is a simple hello world pod"
+    createdBy: "Joiya"
+    createdOn: "2025-05-20"
+    version: "1.0"
+    purpose: "Demonstration of a simple hello world pod"
+    environment: "Development"
+    owner: "Joiya"
+    contact: "+921223456789"
+spec:
+  containers:
+    - name: hello-world-container
+      image: ubuntu:latest
+      command: ["/bin/bash", "-c", "while true; do echo 'Hello, World!'; sleep 2; done"]
+    - name: bye-world-container
+      image: ubuntu:latest
+      command: ["/bin/bash", "-c", "while true; do echo 'By, World!'; sleep 2; done"]
